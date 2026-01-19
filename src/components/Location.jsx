@@ -9,7 +9,7 @@ export function Location(props) {
     ...props,
   }
   return (
-    <section id="relume" className="px-[5%] py-20 md:py-28 lg:py-36 bg-cream-50">
+    <section id="location" className="px-[5%] py-20 md:py-28 lg:py-36 bg-cream-50">
       <div className="container">
         <div>
           <div className="mb-12 grid auto-cols-fr grid-cols-1 gap-x-12 gap-y-12 md:mb-20 md:grid-cols-[1fr_.75fr] md:gap-x-20 md:gap-y-16">
@@ -20,8 +20,7 @@ export function Location(props) {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <div className="mb-4 flex items-center gap-3">
-                <span className="h-px w-8 bg-gold-500" />
+              <div className="mb-4">
                 <p className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">{tagline}</p>
               </div>
               <h2 className="mb-6 font-serif text-4xl font-bold text-navy-900 md:mb-8 md:text-5xl lg:text-6xl">
@@ -30,13 +29,7 @@ export function Location(props) {
               <p className="text-lg text-navy-600 leading-relaxed">{description}</p>
             </motion.div>
 
-            <motion.div
-              className="flex flex-col"
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
+            <div className="flex flex-col">
               <div className="grid auto-cols-fr grid-cols-1 gap-x-4 gap-y-8 py-2">
                 {contacts.map((contact, index) => (
                   <motion.div
@@ -82,7 +75,7 @@ export function Location(props) {
                   </motion.div>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
 

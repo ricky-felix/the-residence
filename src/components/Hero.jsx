@@ -21,26 +21,20 @@ export function Hero(props) {
   const [isIframeLoaded, setIsIframeLoaded] = useState(false)
 
   return (
-    <section id="relume" className="relative overflow-hidden">
+    <section id="hero" className="relative overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-cream-50 via-cream-100/50 to-transparent z-0 pointer-events-none" />
 
       <div className="px-[5%] py-20 md:py-28 lg:py-36 relative z-10">
         <div className="container">
-          <motion.div
-            className="flex w-full max-w-2xl flex-col"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <div className="flex w-full max-w-2xl flex-col">
             {/* Premium tagline */}
             <motion.div
-              className="mb-6 flex items-center gap-3"
+              className="mb-6"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <span className="h-px w-12 bg-gradient-to-r from-gold-500 to-gold-400" />
               <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
                 Premium Smart Living
               </span>
@@ -89,7 +83,7 @@ export function Hero(props) {
                 </Button>
               ))}
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </div>
 

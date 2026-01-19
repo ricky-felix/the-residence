@@ -9,7 +9,7 @@ export function CTA(props) {
     ...props,
   }
   return (
-    <section id="relume" className="px-[5%] py-24 md:py-32 lg:py-40 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
+    <section id="contact" className="px-[5%] py-24 md:py-32 lg:py-40 bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />

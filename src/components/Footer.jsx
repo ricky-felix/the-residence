@@ -29,7 +29,7 @@ export function Footer(props) {
   }
 
   return (
-    <footer id="relume" className="bg-navy-950 text-cream-100">
+    <footer id="footer" className="bg-navy-950 text-cream-100">
       {/* Newsletter Section */}
       <div className="border-navy-800 border-b px-[5%] py-16 md:py-20">
         <div className="container">
@@ -161,7 +161,7 @@ export function Footer(props) {
 
 export const Footer6Defaults = {
   logo: {
-    url: '#',
+    url: '#hero',
     src: 'https://d22po4pjz3o32e.cloudfront.net/logo-image.svg',
     alt: 'The Residence logo',
   },
@@ -184,46 +184,46 @@ export const Footer6Defaults = {
     {
       title: 'Residences',
       links: [
-        { title: '2-Bedroom', url: '#' },
-        { title: '3-Bedroom', url: '#' },
-        { title: 'Penthouses', url: '#' },
-        { title: 'Floor Plans', url: '#' },
+        { title: '2-Bedroom', url: '#residences' },
+        { title: '3-Bedroom', url: '#residences' },
+        { title: 'Penthouses', url: '#residences' },
+        { title: 'Floor Plans', url: '#residences' },
       ],
     },
     {
       title: 'Smart Home',
       links: [
-        { title: 'Features', url: '#' },
-        { title: 'Technology', url: '#' },
-        { title: 'Security', url: '#' },
-        { title: 'Energy', url: '#' },
+        { title: 'Features', url: '#smart-home' },
+        { title: 'Technology', url: '#smart-home' },
+        { title: 'Security', url: '#smart-home' },
+        { title: 'Energy', url: '#smart-home' },
       ],
     },
     {
       title: 'Amenities',
       links: [
-        { title: 'Clubhouse', url: '#' },
-        { title: 'Co-Working', url: '#' },
-        { title: 'Playground', url: '#' },
-        { title: 'EV Charging', url: '#' },
+        { title: 'Clubhouse', url: '#amenities' },
+        { title: 'Co-Working', url: '#amenities' },
+        { title: 'Playground', url: '#amenities' },
+        { title: 'EV Charging', url: '#amenities' },
       ],
     },
     {
       title: 'Explore',
       links: [
-        { title: 'Virtual Tour', url: '#' },
-        { title: 'Gallery', url: '#' },
-        { title: 'Location', url: '#' },
-        { title: 'FAQs', url: '#' },
+        { title: 'Virtual Tour', url: '#hero' },
+        { title: 'Gallery', url: '#hero' },
+        { title: 'Location', url: '#location' },
+        { title: 'FAQs', url: '#contact' },
       ],
     },
     {
       title: 'Company',
       links: [
-        { title: 'About Us', url: '#' },
-        { title: 'Careers', url: '#' },
-        { title: 'Press', url: '#' },
-        { title: 'Contact', url: '#' },
+        { title: 'About Us', url: '#hero' },
+        { title: 'Careers', url: '#contact' },
+        { title: 'Press', url: '#contact' },
+        { title: 'Contact', url: '#location' },
       ],
     },
     {

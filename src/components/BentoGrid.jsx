@@ -10,7 +10,7 @@ export function BentoGrid(props) {
   }
   return (
     <section
-      id="relume"
+      id="smart-home"
       className="to-cream-100 bg-gradient-to-b from-white px-[5%] py-20 md:py-28 lg:py-36"
     >
       <div className="container">

@@ -36,7 +36,7 @@ export function Amenities(props) {
 
   return (
     <section
-      id="relume"
+      id="amenities"
       className="from-navy-50 via-navy-100/50 to-cream-50 relative overflow-hidden bg-gradient-to-b px-[5%] py-20 md:py-28 lg:py-36"
     >
       {/* Decorative background elements */}

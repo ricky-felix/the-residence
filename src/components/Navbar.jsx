@@ -127,17 +127,18 @@ export function Navbar (props) {
               )}
               <div className="rt-4 mt-4 flex flex-col items-center gap-4 lg:ml-8 lg:mt-0 lg:flex-row">
                 {buttons.map((button, index) => (
-                  <Button
-                    key={index}
-                    {...button}
-                    className={`w-full transition-all duration-300 ${
-                      index === 0
-                        ? 'border-navy-700 hover:border-gold-500 hover:text-gold-500'
-                        : 'bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 hover:from-gold-400 hover:to-gold-500 shadow-gold-glow'
-                    }`}
-                  >
-                    {button.title}
-                  </Button>
+                  <a key={index} href={button.url} className="w-full lg:w-auto">
+                    <Button
+                      {...button}
+                      className={`w-full transition-all duration-300 ${
+                        index === 0
+                          ? 'border-navy-700 hover:border-gold-500 hover:text-gold-500'
+                          : 'bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 hover:from-gold-400 hover:to-gold-500 shadow-gold-glow'
+                      }`}
+                    >
+                      {button.title}
+                    </Button>
+                  </a>
                 ))}
               </div>
             </div>
@@ -216,21 +217,21 @@ const SubMenu = ({ navLink, isMobile, isScrolled }) => {
 
 export const NavbarDefaults = {
   logo: {
-    url: "#",
+    url: "#hero",
     src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
     alt: "Logo image",
   },
   navLinks: [
-    { title: "Residences", url: "#" },
-    { title: "Smart Home", url: "#" },
-    { title: "Amenities", url: "#" },
+    { title: "Smart Home", url: "#smart-home" },
+    { title: "Residences", url: "#residences" },
+    { title: "Amenities", url: "#amenities" },
     {
       title: "Explore",
       url: "#",
       subMenuLinks: [
-        { title: "Gallery", url: "#" },
-        { title: "Virtual Tour", url: "#" },
-        { title: "Floor Plans", url: "#" },
+        { title: "Gallery", url: "#hero" },
+        { title: "Virtual Tour", url: "#hero" },
+        { title: "Floor Plans", url: "#residences" },
       ],
     },
   ],
@@ -239,10 +240,12 @@ export const NavbarDefaults = {
       title: "Contact",
       variant: "secondary",
       size: "sm",
+      url: "#location",
     },
     {
       title: "Book Tour",
       size: "sm",
+      url: "#contact",
     },
   ],
 };

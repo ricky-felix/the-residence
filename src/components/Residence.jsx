@@ -9,7 +9,7 @@ export function Residence(props) {
   }
   return (
     <section
-      id="relume"
+      id="residences"
       className="bg-navy-900 relative overflow-hidden px-[5%] py-20 md:py-28 lg:py-36"
     >
       {/* Decorative elements */}
