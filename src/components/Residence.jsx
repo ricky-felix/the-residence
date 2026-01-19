@@ -17,13 +17,7 @@ export function Residence(props) {
       <div className="bg-gold-500/5 absolute right-0 bottom-0 h-96 w-96 rounded-full blur-3xl" />
 
       <div className="relative z-10 container">
-        <motion.div
-          className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24">
           <div className="mb-4 flex items-center justify-center gap-3">
             <span className="bg-gold-500 h-px w-8" />
             <p className="text-gold-400 text-sm font-semibold tracking-[0.2em] uppercase">
@@ -35,7 +29,7 @@ export function Residence(props) {
             {heading}
           </h2>
           <p className="text-navy-200 text-lg">{description}</p>
-        </motion.div>
+        </div>
         <div className="grid auto-cols-fr grid-cols-1 gap-8 md:gap-10 lg:grid-cols-3">
           {cards.map((card, index) => (
             <Card key={index} {...card} index={index} />

@@ -18,7 +18,7 @@ export function BentoGrid(props) {
           className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8 }}
         >
           <div className="mb-4 flex items-center justify-center gap-3">
@@ -61,7 +61,7 @@ const Card = ({ index, ...card }) => {
       className="group border-cream-300 hover:shadow-luxury hover:border-gold-400 relative flex flex-col overflow-hidden rounded-2xl border bg-white shadow-lg transition-all duration-500 hover:-translate-y-2"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.6, delay: index * 0.1 }}
     >
       {/* Gold accent line on hover */}

@@ -45,13 +45,7 @@ export function Amenities(props) {
       <div className="bg-gold-400/5 absolute top-1/2 left-1/4 h-64 w-64 rounded-full blur-2xl" />
 
       <div className="relative z-10 container">
-        <motion.div
-          className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
+        <div className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24">
           <div className="mb-4 flex items-center justify-center gap-3">
             <span className="bg-gold-500 h-px w-8" />
             <p className="text-gold-600 text-sm font-semibold tracking-[0.2em] uppercase">
@@ -63,7 +57,7 @@ export function Amenities(props) {
             {heading}
           </h2>
           <p className="text-navy-600 text-lg">{description}</p>
-        </motion.div>
+        </div>
         <div
           ref={containerRef}
           className="sticky top-0 grid grid-cols-1 gap-8 md:gap-0"
