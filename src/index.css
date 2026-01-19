@@ -1,0 +1,271 @@
+@import 'tailwindcss';
+
+/* Premium Typography - Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* CSS Custom Properties for Premium Theme */
+:root {
+  /* Navy Blues */
+  --navy-50: #f0f4f8;
+  --navy-100: #d9e2ec;
+  --navy-200: #bcccdc;
+  --navy-300: #9fb3c8;
+  --navy-400: #829ab1;
+  --navy-500: #627d98;
+  --navy-600: #486581;
+  --navy-700: #334e68;
+  --navy-800: #243b53;
+  --navy-900: #102a43;
+  --navy-950: #0a1929;
+
+  /* Gold Accents */
+  --gold-50: #fefce8;
+  --gold-100: #fef9c3;
+  --gold-200: #fef08a;
+  --gold-300: #fde047;
+  --gold-400: #facc15;
+  --gold-500: #d4af37;
+  --gold-600: #b8942d;
+  --gold-700: #a17f1a;
+  --gold-800: #854d0e;
+  --gold-900: #713f12;
+
+  /* Cream Neutrals */
+  --cream-50: #fdfbf7;
+  --cream-100: #faf6ed;
+  --cream-200: #f5efe0;
+  --cream-300: #ebe4d3;
+  --cream-400: #d9cdb8;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-luxury: 800ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--cream-50);
+  color: var(--navy-900);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Premium Typography Styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy-900);
+}
+
+/* Gold Accent Links */
+a {
+  transition: color var(--transition-base), opacity var(--transition-base);
+}
+
+/* Premium Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold-500) 0%, var(--gold-600) 100%);
+  color: var(--navy-950);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border-radius: 0.5rem;
+  transition: all var(--transition-base);
+  box-shadow: 0 4px 14px 0 rgba(212, 175, 55, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px 0 rgba(212, 175, 55, 0.4);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--navy-900);
+  font-weight: 600;
+  padding: 0.875rem 2rem;
+  border: 2px solid var(--navy-900);
+  border-radius: 0.5rem;
+  transition: all var(--transition-base);
+}
+
+.btn-secondary:hover {
+  background: var(--navy-900);
+  color: var(--cream-50);
+  transform: translateY(-2px);
+}
+
+/* Premium Card Styles */
+.card-luxury {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(16, 42, 67, 0.08);
+  transition: all var(--transition-slow);
+  border: 1px solid var(--cream-300);
+}
+
+.card-luxury:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16, 42, 67, 0.15);
+  border-color: var(--gold-400);
+}
+
+/* Gold Accent Decorations */
+.gold-accent {
+  position: relative;
+}
+
+.gold-accent::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-400));
+  border-radius: 2px;
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Color */
+::selection {
+  background: var(--gold-200);
+  color: var(--navy-900);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cream-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--navy-300);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--navy-500);
+}
+
+/* Parallax Container */
+.parallax-container {
+  perspective: 1000px;
+  overflow-x: hidden;
+}
+
+/* Premium Image Overlay */
+.image-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(16, 42, 67, 0.1) 50%,
+    rgba(16, 42, 67, 0.6) 100%
+  );
+  z-index: 1;
+  transition: opacity var(--transition-base);
+}
+
+.image-overlay:hover::before {
+  opacity: 0.8;
+}
+
+/* Shimmer Effect */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 175, 55, 0.2),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Divider with Gold Accent */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold-400),
+    transparent
+  );
+}
+
+/* Text Gradient */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--gold-600), var(--gold-400));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Focus States */
+*:focus-visible {
+  outline: 2px solid var(--gold-500);
+  outline-offset: 2px;
+}
+
+/* Animation Utilities */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all var(--transition-luxury);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Premium Section Backgrounds */
+.bg-section-light {
+  background: linear-gradient(180deg, var(--cream-50) 0%, white 100%);
+}
+
+.bg-section-navy {
+  background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+}
+
+/* Floating Animation for Premium Elements */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Border Gradient */
+.border-gradient {
+  border: 2px solid transparent;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, var(--gold-500), var(--navy-700)) border-box;
+}
