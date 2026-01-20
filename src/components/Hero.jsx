@@ -23,9 +23,9 @@ export function Hero(props) {
   return (
     <section id="hero" className="relative overflow-hidden">
       {/* Background gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cream-50 via-cream-100/50 to-transparent z-0 pointer-events-none" />
+      <div className="from-cream-50 via-cream-100/50 pointer-events-none absolute inset-0 z-0 bg-gradient-to-b to-transparent" />
 
-      <div className="px-[5%] py-20 md:py-28 lg:py-36 relative z-10">
+      <div className="relative z-10 px-[5%] py-20 md:py-28 lg:py-36">
         <div className="container">
           <div className="flex w-full max-w-2xl flex-col">
             {/* Premium tagline */}
@@ -35,26 +35,31 @@ export function Hero(props) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <span className="text-sm font-semibold uppercase tracking-[0.2em] text-gold-600">
+              <span className="text-gold-600 text-sm font-semibold tracking-[0.2em] uppercase">
                 Premium Smart Living
               </span>
             </motion.div>
 
             <motion.h1
-              className="mb-6 font-serif text-5xl font-bold leading-[1.1] text-navy-900 md:mb-8 md:text-7xl lg:text-8xl"
+              className="text-navy-900 mb-6 font-serif text-5xl leading-[1.1] font-bold md:mb-8 md:text-7xl lg:text-8xl"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               {heading.split(' ').map((word, index) => (
-                <span key={index} className={index === 1 || index === 3 ? 'text-gradient-gold' : ''}>
+                <span
+                  key={index}
+                  className={
+                    index === 1 || index === 3 ? 'text-gradient-gold' : ''
+                  }
+                >
                   {word}{' '}
                 </span>
               ))}
             </motion.h1>
 
             <motion.p
-              className="text-lg text-navy-600 md:text-xl leading-relaxed"
+              className="text-navy-600 text-lg leading-relaxed md:text-xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
@@ -75,8 +80,8 @@ export function Hero(props) {
                   className={clsx(
                     'px-8 py-4 text-base font-semibold transition-all duration-300',
                     index === 0
-                      ? 'bg-gradient-to-r from-gold-500 to-gold-600 text-navy-950 hover:from-gold-400 hover:to-gold-500 shadow-lg hover:shadow-gold-glow hover:-translate-y-1'
-                      : 'border-2 border-navy-800 text-navy-800 hover:bg-navy-900 hover:text-cream-50 hover:-translate-y-1'
+                      ? 'from-gold-500 to-gold-600 text-navy-950 hover:from-gold-400 hover:to-gold-500 hover:shadow-gold-glow bg-gradient-to-r shadow-lg hover:-translate-y-1'
+                      : 'border-navy-800 text-navy-800 hover:bg-navy-900 hover:text-cream-50 border-2 hover:-translate-y-1'
                   )}
                 >
                   {button.title}
@@ -89,7 +94,7 @@ export function Hero(props) {
 
       {/* Video Section with Premium Overlay */}
       <Dialog>
-        <DialogTrigger className="relative flex size-full items-center justify-center group">
+        <DialogTrigger className="group relative flex size-full items-center justify-center">
           <motion.div
             className="relative w-full overflow-hidden"
             initial={{ opacity: 0, scale: 0.95 }}
@@ -102,9 +107,9 @@ export function Hero(props) {
               className="aspect-video size-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             {/* Navy gradient overlay */}
-            <span className="absolute inset-0 z-10 bg-gradient-to-t from-navy-950/80 via-navy-900/40 to-transparent" />
+            <span className="from-navy-950/80 via-navy-900/40 absolute inset-0 z-10 bg-gradient-to-t to-transparent" />
             {/* Gold accent line */}
-            <span className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent z-20" />
+            <span className="via-gold-500 absolute right-0 bottom-0 left-0 z-20 h-1 bg-gradient-to-r from-transparent to-transparent" />
           </motion.div>
 
           {/* Play Button */}
@@ -112,24 +117,24 @@ export function Hero(props) {
             className="absolute z-20 flex flex-col items-center gap-4"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.8, type: "spring" }}
+            transition={{ duration: 0.5, delay: 0.8, type: 'spring' }}
           >
             <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-gold-500/30 animate-ping" />
-              <FaCirclePlay className="relative size-20 text-gold-400 transition-all duration-300 group-hover:text-gold-300 group-hover:scale-110 drop-shadow-lg" />
+              <div className="bg-gold-500/30 absolute inset-0 animate-ping rounded-full" />
+              <FaCirclePlay className="text-gold-400 group-hover:text-gold-300 relative size-20 drop-shadow-lg transition-all duration-300 group-hover:scale-110" />
             </div>
-            <span className="text-sm font-semibold uppercase tracking-widest text-cream-50">
+            <span className="text-cream-50 text-sm font-semibold tracking-widest uppercase">
               Watch Video
             </span>
           </motion.div>
         </DialogTrigger>
-        <DialogContent className="bg-navy-950/95 backdrop-blur-lg border-navy-800">
+        <DialogContent className="bg-navy-950/95 border-navy-800 backdrop-blur-lg">
           {!isIframeLoaded && (
-            <CgSpinner className="mx-auto size-16 animate-spin text-gold-400" />
+            <CgSpinner className="text-gold-400 mx-auto size-16 animate-spin" />
           )}
           <iframe
             className={clsx(
-              'z-0 mx-auto aspect-video size-full md:w-[738px] lg:w-[940px] rounded-lg',
+              'z-0 mx-auto aspect-video size-full rounded-lg md:w-[738px] lg:w-[940px]',
               {
                 visible: isIframeLoaded,
                 hidden: !isIframeLoaded,

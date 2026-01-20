@@ -3,7 +3,7 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}'
+    './node_modules/@relume_io/relume-ui/dist/**/*.{js,ts,jsx,tsx}',
   ],
   presets: [require('@relume_io/relume-tailwind')],
   theme: {
@@ -47,8 +47,23 @@ module.exports = {
         },
       },
       fontFamily: {
-        serif: ['Playfair Display', 'Georgia', 'Cambria', 'Times New Roman', 'serif'],
-        sans: ['Inter', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        serif: [
+          'Playfair Display',
+          'Georgia',
+          'Cambria',
+          'Times New Roman',
+          'serif',
+        ],
+        sans: [
+          'Inter',
+          'system-ui',
+          '-apple-system',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica Neue',
+          'Arial',
+          'sans-serif',
+        ],
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',
@@ -57,8 +72,8 @@ module.exports = {
         'slide-in-left': 'slideInLeft 0.6s ease-out forwards',
         'slide-in-right': 'slideInRight 0.6s ease-out forwards',
         'scale-in': 'scaleIn 0.5s ease-out forwards',
-        'float': 'float 6s ease-in-out infinite',
-        'shimmer': 'shimmer 2s linear infinite',
+        float: 'float 6s ease-in-out infinite',
+        shimmer: 'shimmer 2s linear infinite',
         'pulse-gold': 'pulseGold 2s ease-in-out infinite',
       },
       keyframes: {
@@ -101,12 +116,15 @@ module.exports = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-navy': 'linear-gradient(135deg, #102a43 0%, #243b53 50%, #334e68 100%)',
-        'gradient-gold': 'linear-gradient(135deg, #d4a f37 0%, #facc15 50%, #fef08a 100%)',
-        'shimmer-gold': 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent)',
+        'gradient-navy':
+          'linear-gradient(135deg, #102a43 0%, #243b53 50%, #334e68 100%)',
+        'gradient-gold':
+          'linear-gradient(135deg, #d4a f37 0%, #facc15 50%, #fef08a 100%)',
+        'shimmer-gold':
+          'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent)',
       },
       boxShadow: {
-        'luxury': '0 25px 50px -12px rgba(16, 42, 67, 0.25)',
+        luxury: '0 25px 50px -12px rgba(16, 42, 67, 0.25)',
         'luxury-lg': '0 35px 60px -15px rgba(16, 42, 67, 0.3)',
         'gold-glow': '0 0 30px rgba(212, 175, 55, 0.3)',
         'inner-gold': 'inset 0 2px 4px 0 rgba(212, 175, 55, 0.1)',
@@ -116,7 +134,7 @@ module.exports = {
         '5xl': '2.5rem',
       },
       transitionTimingFunction: {
-        'luxury': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        luxury: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
     },
   },
