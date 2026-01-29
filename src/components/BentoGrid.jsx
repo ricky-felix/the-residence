@@ -13,7 +13,7 @@ export function BentoGrid(props) {
       id="smart-home"
       className="to-cream-100 bg-gradient-to-b from-white px-[5%] py-20 md:py-28 lg:py-36"
     >
-      <div className="container">
+      <div className="container mx-auto">
         <motion.div
           className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24"
           initial={{ opacity: 0, y: 30 }}

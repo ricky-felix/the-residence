@@ -26,7 +26,7 @@ export function Hero(props) {
       <div className="from-cream-50 via-cream-100/50 pointer-events-none absolute inset-0 z-0 bg-gradient-to-b to-transparent" />
 
       <div className="relative z-10 px-[5%] py-20 md:py-28 lg:py-36">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex w-full max-w-2xl flex-col">
             {/* Premium tagline */}
             <motion.div

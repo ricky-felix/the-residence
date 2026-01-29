@@ -16,7 +16,7 @@ export function Residence(props) {
       <div className="bg-gold-500/5 absolute top-0 left-0 h-96 w-96 rounded-full blur-3xl" />
       <div className="bg-gold-500/5 absolute right-0 bottom-0 h-96 w-96 rounded-full blur-3xl" />
 
-      <div className="relative z-10 container">
+      <div className="container relative z-10 mx-auto">
         <div className="mx-auto mb-16 w-full max-w-2xl text-center md:mb-20 lg:mb-24">
           <div className="mb-4 flex items-center justify-center gap-3">
             <span className="bg-gold-500 h-px w-8" />

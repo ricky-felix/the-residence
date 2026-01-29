@@ -32,7 +32,7 @@ export function Footer(props) {
     <footer id="footer" className="bg-navy-950 text-cream-100">
       {/* Newsletter Section */}
       <div className="border-navy-800 border-b px-[5%] py-16 md:py-20">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="lg:flex lg:items-center lg:justify-between">
             <motion.div
               className="mb-8 lg:mb-0 lg:max-w-md"
@@ -83,7 +83,7 @@ export function Footer(props) {
 
       {/* Main Footer Content */}
       <div className="px-[5%] py-12 md:py-16">
-        <div className="container">
+        <div className="container mx-auto">
           {/* Links Grid */}
           <div className="mb-12 grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 md:mb-16 lg:grid-cols-6">
             {columnLinks.map((column, index) => (

@@ -21,7 +21,7 @@ export function CTA(props) {
       <div className="via-gold-500/50 absolute top-0 right-0 left-0 h-px bg-gradient-to-r from-transparent to-transparent" />
       <div className="via-gold-500/50 absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent to-transparent" />
 
-      <div className="relative z-10 container">
+      <div className="container relative z-10 mx-auto">
         <div className="mx-auto w-full max-w-4xl text-center">
           <h1 className="overflow-hidden">
             {headers.map((heading, index) => (

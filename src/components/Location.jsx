@@ -13,7 +13,7 @@ export function Location(props) {
       id="location"
       className="bg-cream-50 px-[5%] py-20 md:py-28 lg:py-36"
     >
-      <div className="container">
+      <div className="container mx-auto">
         <div>
           <div className="mb-12 grid auto-cols-fr grid-cols-1 gap-x-12 gap-y-12 md:mb-20 md:grid-cols-[1fr_.75fr] md:gap-x-20 md:gap-y-16">
             <motion.div
