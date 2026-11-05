@@ -1,0 +1,67 @@
+.splash {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--light);
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+}
+.splash__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  width: min(420px, 100%);
+}
+.splash__brand {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(44px, 9vw, 76px);
+  line-height: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0 0.25em;
+  text-align: center;
+}
+.splash__mask {
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+}
+.splash__word {
+  display: inline-block;
+}
+.splash__tag {
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 500;
+  background: var(--accent);
+  color: var(--ink);
+  padding: 4px 10px;
+  border-radius: 2px;
+  line-height: 1.2;
+}
+.splash__meta {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--night-muted);
+}
+.splash__bar {
+  width: 100%;
+  height: 3px;
+  background: var(--night-line);
+  overflow: hidden;
+}
+.splash__bar-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  transform-origin: left center;
+}

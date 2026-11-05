@@ -204,3 +204,8 @@ select:focus-visible {
   clip: rect(0 0 0 0);
   white-space: nowrap;
 }
+
+/* Wrapper used only to make the page inert behind the splash; adds no box. */
+.page {
+  display: contents;
+}
