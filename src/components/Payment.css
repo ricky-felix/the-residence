@@ -1,0 +1,118 @@
+.band--paper.payment {
+  border-bottom: 0;
+}
+.payment__controls {
+  flex: 1 1 360px;
+  min-width: 0;
+  max-width: 540px;
+}
+.payment__lead {
+  margin: 20px 0 0;
+}
+.payment__fields {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  margin-top: 28px;
+}
+.payment__label-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 12px;
+  margin-bottom: 4px;
+}
+.payment__label {
+  font-weight: 500;
+}
+.payment__label--block {
+  margin-bottom: 8px;
+}
+.payment__value {
+  font-size: 14px;
+}
+.payment__range {
+  width: 100%;
+  margin: 0;
+  height: 28px;
+  accent-color: var(--ink);
+}
+.payment__presets {
+  margin-top: 6px;
+}
+.payment__preset {
+  font-size: 14px;
+  padding: 0 14px;
+}
+.payment .toggle {
+  font-size: 15px;
+}
+.payment__card {
+  flex: 1 1 360px;
+  min-width: 0;
+  background: var(--ink);
+  color: var(--light);
+  padding: 32px;
+  border-radius: 4px;
+}
+.payment__muted {
+  font-size: 14px;
+  color: var(--night-muted);
+}
+.payment__muted--tight {
+  margin-top: 4px;
+}
+.payment__monthly {
+  font-family: var(--serif);
+  font-size: 56px;
+  line-height: 1.05;
+  color: var(--accent);
+  overflow-wrap: anywhere;
+}
+.payment__bar {
+  margin-top: 24px;
+  display: flex;
+  height: 14px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+.payment__legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--night-muted);
+}
+.payment__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.payment__swatch {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+.payment__results {
+  margin: 24px 0 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px 16px;
+  font-size: 15px;
+  border-top: 1px solid var(--night-line);
+  padding-top: 18px;
+}
+.payment__results dt {
+  color: var(--night-muted);
+}
+.payment__results dd {
+  margin: 0;
+  font-size: 14px;
+  text-align: right;
+}
+.payment__disclaimer {
+  margin: 20px 0 0;
+  font-size: 13px;
+  color: var(--night-muted);
+}

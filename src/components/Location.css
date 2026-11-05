@@ -1,0 +1,40 @@
+.location__side {
+  flex: 1 1 320px;
+  max-width: 400px;
+  min-width: 0;
+}
+.location__lead {
+  margin: 20px 0 24px;
+}
+.location__cat {
+  font-size: 15px;
+  padding: 0 14px;
+}
+.location__swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+.location__list {
+  margin-top: 24px;
+  border-top: 1px solid var(--ink);
+}
+.location__item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 15px;
+}
+.location__time {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+.location__map {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--ink);
+}

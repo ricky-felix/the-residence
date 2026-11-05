@@ -1,16 +1,34 @@
-# React + Vite
+# The Residence 2.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A showcase redesign of a smart-home residential complex landing page (Medan). A concept by Titik Jalin. All content is illustrative.
 
-Currently, two official plugins are available:
+> **This is a major refactoring, not a copy.** The design was prototyped on a Claude Design board and rebuilt here as a typed React app. Read [REFACTORING.md](./REFACTORING.md) for what changed, what must keep working, and the porting rules.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Run it
 
-## React Compiler
+```
+npm install
+npm run dev      # local dev server
+npm run build    # type-check and production build
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Stack: Vite, React 19, TypeScript (strict), plain CSS (global tokens in `src/styles/global.css`, one CSS file per component).
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/App.tsx`: page order
+- `src/components/`: one component per section (Nav, Hero, AppMockup, SitePlan, Units, Apartment, Payment, Location, Terrace, Ask, Visit, Footer)
+- `src/store.tsx`: shared calculator price (set by the unit picker, read by the payment calculator)
+- `src/lib/`: colour maths, tokens, Rupiah formatting
+
+## Sample data and placeholders
+
+Nothing here is real. Look for `// SAMPLE:` comments: unit prices and statuses, drive times, `[NAME]` / `[MIN]` / `[SIZE]` / `[PRICE]` placeholders, plan dimensions, terrace specification, scripted concierge replies. The visit form makes no network call.
+
+## Next steps
+
+- Finish switcher and compare-two-units
+- Real 3D hero (Three.js) in place of the SVG isometric
+- Real AI concierge in place of scripted replies
+- Real imagery, bilingual EN/ID, verified location data
+- Mobile pass

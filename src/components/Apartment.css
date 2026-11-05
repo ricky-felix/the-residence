@@ -1,0 +1,80 @@
+.apartment__layer {
+  text-align: left;
+  gap: 12px;
+}
+.apartment__swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--ink);
+  box-sizing: border-box;
+  flex: none;
+}
+.apartment__swatch--circle {
+  border-radius: 50%;
+}
+.apartment__swatch--square-small {
+  transform: scale(0.8);
+}
+.apartment__swatch--diamond {
+  transform: rotate(45deg) scale(0.8);
+}
+
+.apartment__plan {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--ink);
+}
+
+.apartment__table-wrap {
+  margin-top: 40px;
+  overflow-x: auto;
+}
+.apartment__table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 560px;
+  font-size: 16px;
+}
+.apartment__table caption {
+  text-align: left;
+  font-family: var(--serif);
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.apartment__table thead tr {
+  border-bottom: 2px solid var(--ink);
+  text-align: left;
+}
+.apartment__table thead th {
+  padding: 10px 12px;
+  font-weight: 600;
+}
+.apartment__table thead th:first-child {
+  padding-left: 0;
+}
+.apartment__table thead th:last-child {
+  padding-right: 0;
+  padding-left: 12px;
+}
+.apartment__table tbody tr {
+  border-bottom: 1px solid var(--rule);
+  vertical-align: top;
+}
+.apartment__table tbody th,
+.apartment__table tbody td {
+  padding: 14px 12px;
+}
+.apartment__table tbody th {
+  padding-left: 0;
+  text-align: left;
+  font-weight: 500;
+}
+.apartment__table tbody td:last-child {
+  padding-right: 0;
+}
+.apartment__table td.mono {
+  font-size: 14px;
+}

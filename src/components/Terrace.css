@@ -1,0 +1,22 @@
+.terrace {
+  padding-block: 88px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 56px;
+  align-items: center;
+}
+.terrace__lead {
+  margin: 20px 0 0;
+}
+.terrace__note {
+  margin: 16px 0 0;
+  font-size: 14px;
+  color: var(--ink-muted);
+}
+.terrace__drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  border: 1px solid var(--ink);
+}
